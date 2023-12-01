@@ -8,7 +8,7 @@
   
     - name: Obtain information about a folder
       ansible.windows.win_stat:
-        path: C:\Temp
+        path: E:\eCommerce\eCommerce_WEBSite
       register: folder_info
 
     - name: Imprimir resultado
