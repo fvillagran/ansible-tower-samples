@@ -6,9 +6,8 @@
  
   tasks:
   
-    - name: Example from an Ansible Playbook
-      win_ping:
-
-    - name: Induce an exception to see what happens
-      win_ping:
-        data: crash
+    - name: Copy a single file, but keep a backup
+      ansible.windows.win_copy:
+        src: /srv/myfiles/foo.conf
+        dest: C:\Temp\renamed-foo.conf
+        backup: yes
