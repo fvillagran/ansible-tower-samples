@@ -10,3 +10,7 @@
       ansible.windows.win_stat:
         path: C:\Temp
       register: folder_info
+
+    - name: Imprimir resultado
+      debug: 
+        var: folder_info.stat.exists
