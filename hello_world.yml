@@ -1,9 +1,13 @@
 # Test connectivity to a windows host
 # ansible winserver -m ansible.windows.win_ping
+---
+- name: Hello World!
+  hosts: all
+ 
+  tasks:
+    - name: Example from an Ansible Playbook
+      ansible.windows.win_ping:
 
-- name: Example from an Ansible Playbook
-  ansible.windows.win_ping:
-
-- name: Induce an exception to see what happens
-  ansible.windows.win_ping:
-    data: crash
+    - name: Induce an exception to see what happens
+      ansible.windows.win_ping:
+        data: crash
