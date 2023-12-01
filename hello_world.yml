@@ -6,7 +6,7 @@
  
   tasks:
   
-    - name: Touch a file (creates if not present, updates modification time if present)
-      ansible.windows.win_file:
-        path: C:\Temp\foo.conf
-        state: touch
+    - name: Obtain information about a folder
+      ansible.windows.win_stat:
+        path: C:\Temp
+      register: folder_info
