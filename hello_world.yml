@@ -14,3 +14,13 @@
     - name: Imprimir resultado
       debug: 
         var: folder_info.stat.exists
+
+    - name: Buscar archivos en la carpeta especificada
+      win_find:
+        paths: 'E:\eCommerce\eCommerce_WEBSite'
+        recurse: yes
+      register: archivos_encontrados
+
+    - name: Mostrar lista de archivos
+      debug:
+        var: archivos_encontrados.files
