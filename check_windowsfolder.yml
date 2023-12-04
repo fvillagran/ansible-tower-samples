@@ -1,1 +1,14 @@
+---
+- name: chequea existencia de folder en windows
+  hosts: all
+ 
+  tasks:
+  
+    - name: Obtener informacion de carpeta
+      ansible.windows.win_stat:
+        path: "{{ FOLDER }}"
+      register: folder_info
 
+    - name: Imprimir resultado
+      debug: 
+        var: folder_info.stat.exists
