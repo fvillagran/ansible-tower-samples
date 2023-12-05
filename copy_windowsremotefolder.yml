@@ -3,8 +3,9 @@
   hosts: all
  
   tasks:
-
-  ansible.windows.win_copy:
-    src: "{{ FOLDER }}"
-    dest: /home/mespinosa/test-windows
-    remote_src: true
+  
+    - name: copy windows folder
+      ansible.windows.win_copy:
+        src: "{{ FOLDER }}"
+        dest: /home/mespinosa/test-windows
+        remote_src: true
