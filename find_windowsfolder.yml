@@ -1,0 +1,9 @@
+---
+- name: Lista archivos de un folder
+  hosts: all
+ 
+  tasks:
+
+    - name: Find hidden files in path
+      ansible.windows.win_find:
+        paths: "{{ FOLDER }}"
