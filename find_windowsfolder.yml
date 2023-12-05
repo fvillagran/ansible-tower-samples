@@ -8,7 +8,6 @@
       ansible.windows.win_find:
         paths: "{{ FOLDER }}"
         file_type: directory
-      register: apps_found
 
     - name: Get the content of found files from host
       slurp:
