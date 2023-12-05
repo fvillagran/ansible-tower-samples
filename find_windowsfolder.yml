@@ -7,15 +7,13 @@
     - name: Find hidden files in path
       ansible.windows.win_find:
         paths: "{{ FOLDER }}"
-      register: apps_found
+      register: wrapper
 
-    - name: Get the content of found files from host
-      slurp:
-        src: "{{ item }}"
-      loop: "{{ apps_found | json_query('files[].path') }}"
-      register: slurped_files
-
-    - name: Display result
+    - name: output wrapper
       debug:
-        msg: "Found application {{ item.item | win_dirname | win_basename }} with contents: {{ item.content | b64decode }}"
-      loop: "{{ slurped_files.results }}"
+        var: wrapper.files
+
+    - name: output wrapper list
+      debug:
+      msg: "The file name is {{ item.path }}"
+      with_items: "{{wrapper.files}}"
