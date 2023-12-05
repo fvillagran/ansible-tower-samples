@@ -15,5 +15,5 @@
 
     - name: output wrapper list
       debug:
-      msg: "The file name is {{ item.path }}"
+        msg: "The file name is {{ item.path }}"
       with_items: "{{wrapper.files}}"
