@@ -1,5 +1,9 @@
 ---
 - name: Copy a folder recursively where the source is on the remote host
+  hosts: all
+ 
+  tasks:
+
   ansible.windows.win_copy:
     src: "{{ FOLDER }}"
     dest: /home/mespinosa/test-windows
