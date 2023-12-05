@@ -4,7 +4,7 @@
  
   tasks:
   
-    - name: copy windows folder
+    - name: Copiar windows folder
       ansible.windows.win_copy:
         src: "{{ FOLDER }}"
         dest: /home/mespinosa/test-windows
