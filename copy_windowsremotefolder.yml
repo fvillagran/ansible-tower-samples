@@ -7,5 +7,5 @@
     - name: Copiar windows folder
       ansible.windows.win_copy:
         src: "{{ FOLDER }}"
-        dest: /home/mespinosa/test-windows
+        dest: "{{ FOLDER_TARGET }}"
         remote_src: true
