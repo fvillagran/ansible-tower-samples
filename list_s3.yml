@@ -3,9 +3,9 @@
 - name: Lista archivos de bucket S3
   hosts: all
 
-Tasks:
-
-- name: List keys simple
-  amazon.aws.s3_object:
-    bucket: "{{ AWS_BUCKET }}"
-    mode: list
+  tasks:
+  
+  - name: List keys simple
+    amazon.aws.s3_object:
+      bucket: "{{ AWS_BUCKET }}"
+      mode: list
