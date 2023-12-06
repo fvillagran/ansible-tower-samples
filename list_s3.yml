@@ -1,7 +1,7 @@
 # List Keys S3 AWS
 ---
 - name: Lista archivos de bucket S3
-  hosts: all
+  hosts: localhost
 
   tasks:
   
