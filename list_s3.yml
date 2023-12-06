@@ -1,11 +1,11 @@
 # List Keys S3 AWS
 ---
-- name: Hello World!
+- name: Lista archivos de bucket S3
   hosts: all
 
 Taks:
 
 - name: List keys simple
   amazon.aws.s3_object:
-    bucket: mybucket
+    bucket: {{}}
     mode: list
