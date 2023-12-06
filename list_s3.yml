@@ -1,6 +1,5 @@
-# List Keys S3 AWS
 ---
-- name: Lista archivos de bucket S3
+- name: AWS S3 Bucket List - Ansible
   hosts: localhost
 
   tasks:
