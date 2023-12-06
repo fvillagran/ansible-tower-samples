@@ -6,12 +6,11 @@
   
     - name: List keys simple
       amazon.aws.s3_object:
+        aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
+        aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
         bucket: "{{ AWS_BUCKET }}"
         region: "{{ REGION }}"
         mode: list
-      vars:
-        AWS_ACCESS_KEY_ID: "{{ AWS_ACCESS_KEY_ID }}"
-        AWS_SECRET_ACCESS_KEY: "{{ AWS_SECRET_ACCESS_KEY }}"
       register: listresult
     
     - debug: msg={{listresult.s3_keys}}
