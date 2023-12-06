@@ -1,0 +1,8 @@
+---
+
+Taks:
+
+- name: List keys simple
+  amazon.aws.s3_object:
+    bucket: mybucket
+    mode: list
