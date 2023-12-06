@@ -3,7 +3,7 @@
 - name: Lista archivos de bucket S3
   hosts: all
 
-Taks:
+Tasks:
 
 - name: List keys simple
   amazon.aws.s3_object:
