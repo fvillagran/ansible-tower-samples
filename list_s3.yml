@@ -9,3 +9,6 @@
       amazon.aws.s3_object:
         bucket: "{{ AWS_BUCKET }}"
         mode: list
+      register: listresult
+    
+    - debug: msg={{listresult.s3_keys}}
