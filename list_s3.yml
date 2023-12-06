@@ -7,5 +7,5 @@ Taks:
 
 - name: List keys simple
   amazon.aws.s3_object:
-    bucket: {{}}
+    bucket: "{{ AWS_BUCKET }}"
     mode: list
