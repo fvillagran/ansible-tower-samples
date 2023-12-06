@@ -1,0 +1,19 @@
+---
+- name: Testing windows modules Download S3
+  hosts: windows
+  gather_facts: false
+  
+  tasks:
+  - name: manage objects in S3.
+    aws_s3:
+      aws_access_key: "{{ ACCESS_KEY }}"
+      aws_secret_key: "{{ SECRET_KEY }}"
+      bucket: jboossNat
+      dest: E:\sources\jboss-native.zip
+      mode: put
+      object: jboss-native.zip
+      overwrite: different
+      region: eu-west-1
+    register: aws_output
+  - debug: var=aws_outputster: aws_output
+  - debug: var=aws_output
