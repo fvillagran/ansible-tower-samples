@@ -7,6 +7,7 @@
     - name: List keys simple
       amazon.aws.s3_object:
         bucket: "{{ AWS_BUCKET }}"
+        region: "{{ REGION }}"
         mode: list
       register: listresult
     
