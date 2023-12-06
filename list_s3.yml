@@ -5,7 +5,7 @@
 
   tasks:
   
-  - name: List keys simple
-    amazon.aws.s3_object:
-      bucket: "{{ AWS_BUCKET }}"
-      mode: list
+    - name: List keys simple
+      amazon.aws.s3_object:
+        bucket: "{{ AWS_BUCKET }}"
+        mode: list
