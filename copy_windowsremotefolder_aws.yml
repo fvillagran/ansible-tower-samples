@@ -1,1 +1,14 @@
-
+---
+- name: copy files web to aws s3
+  hosts: all
+ 
+  tasks:
+  
+    - name: Copiar archivos a AWS S3
+      community.aws.s3_sync:
+        bucket: "{{ AWS_BUCKET}}"
+        file_root: "{{ FOLDER }}"
+        region: us-east-1
+      vars:
+        AWS_ACCESS_KEY_ID: "{{ AWS_ACCESS_KEY_ID }}"
+        AWS_SECRET_ACCESS_KEY: "{{ AWS_SECRET_ACCESS_KEY }}"
