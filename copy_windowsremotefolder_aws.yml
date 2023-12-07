@@ -1,6 +1,6 @@
 ---
 - name: copy files web to aws s3
-  hosts: all
+  hosts: localhost
  
   tasks:
   
