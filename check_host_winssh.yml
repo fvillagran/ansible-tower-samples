@@ -1,5 +1,5 @@
 ---
-- name: chequea windows host ssh
+- name: chequea windows host ssh 
   hosts: all
 
   tasks:
