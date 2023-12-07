@@ -1,6 +1,6 @@
 ---
 - name: AWS S3 Bucket List - Ansible
-  hosts: all
+  hosts: localhost
 
   tasks:
   
@@ -11,7 +11,6 @@
         bucket: "{{ AWS_BUCKET }}"
         region: "{{ REGION }}"
         mode: list
-        delegate_to: 127.0.0.1
       register: listresult
     
     - debug: msg={{listresult.s3_keys}}
