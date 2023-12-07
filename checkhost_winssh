@@ -15,8 +15,7 @@
   tasks:
 
     - name: test powershell
-      win_shell: |
-                get-host
+      ansible.windows.win_shell: get-host
       register: result_get_host
        
     - name: display result_get_host
