@@ -11,4 +11,3 @@
     - name: display result_get_host
       debug:
        var: result_get_host
-
