@@ -4,11 +4,11 @@
  
   tasks:
   
-    - name: Copiar archivos a AWS S3
-      community.aws.s3_sync:
-        bucket: "{{ AWS_BUCKET}}"
-        file_root: "{{ FOLDER }}"
+    - name: Copiar archivos a AWS S3 con el módulo s3_object
+      amazon.aws.s3_object:
+        bucket: "{{ AWS_BUCKET }}"
+        object: "{{ ITEM }}"
+        src: "{{ FOLDER }}"
+        aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
+        aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
         region: us-east-1
-      vars:
-        AWS_ACCESS_KEY_ID: "{{ AWS_ACCESS_KEY_ID }}"
-        AWS_SECRET_ACCESS_KEY: "{{ AWS_SECRET_ACCESS_KEY }}"
