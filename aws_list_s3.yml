@@ -11,6 +11,7 @@
         bucket: "{{ AWS_BUCKET }}"
         region: "{{ REGION }}"
         mode: list
+        delegate_to: 127.0.0.1
       register: listresult
     
     - debug: msg={{listresult.s3_keys}}
