@@ -8,9 +8,9 @@
       ansible.windows.win_shell: get-host
       register: result_get_host
        
-    - name: display result_get_host
+    - name: display result get_host
       debug:
        var: result_get_host
 
-    - name: "Download file from S3"
-      win_shell: "aws s3 sync E:\\eCommerce\\eCommerce_WEBSite s3://chilecompra-ansible-test/web_dev"
+    - name: upload files to S3"
+      win_shell: "aws s3 sync {{FOLDER_SOURCE}} {{FOLDER_TARGET}}"
