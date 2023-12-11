@@ -13,4 +13,4 @@
        var: result_get_host
 
     - name: "Download file from S3"
-      ansible.windows.win_shell: "aws s3 sync s3://my-fancy-bucket/my-folder/ C:\\Users\\cl170277171\\Desktop\\ansible_tmp\\
+      ansible.windows.win_shell: "aws s3 sync s3://chilecompra-ansible-test/ C:\\Users\\cl170277171\\Desktop\\ansible_tmp\\
