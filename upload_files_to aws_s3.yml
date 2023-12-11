@@ -4,5 +4,5 @@
 
   tasks:
   
-    - name: upload files to S3"
+    - name: upload files to S3
       win_shell: "aws s3 sync {{FOLDER_SOURCE}} {{FOLDER_TARGET}}"
