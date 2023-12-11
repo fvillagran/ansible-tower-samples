@@ -13,4 +13,4 @@
        var: result_get_host
 
     - name: "Download file from S3"
-      win_shell: "aws s3 sync E:\eCommerce\eCommerce_WEBSite s3://chilecompra-ansible-test/web_dev"
+      win_shell: "aws s3 sync E:\\eCommerce\\eCommerce_WEBSite s3://chilecompra-ansible-test/web_dev"
