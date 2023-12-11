@@ -12,5 +12,5 @@
       debug:
        var: result_get_host
 
-    - name: "Download file from S3"
-      ansible.windows.win_shell: "aws s3 sync s3://chilecompra-ansible-test/ C:\\Users\\cl170277171\\Desktop\\ansible_tmp\\"
+    - name: Copiar archivos a S3 usando AWS CLI
+      command: aws s3 sync C:\Users\cl170277171\Desktop\ansible_tmp\ s3://chilecompra-ansible-test/
